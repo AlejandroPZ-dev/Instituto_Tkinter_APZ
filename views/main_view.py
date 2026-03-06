@@ -5,6 +5,10 @@ from views.pantallas.alumnos_pantalla import AlumnosPantalla
 from views.pantallas.aulas_pantalla import AulasPantalla
 from views.pantallas.home_pantalla import HomePantalla
 from views.pantallas.profesores_pantalla import ProfesoresPantalla
+from views.pantallas.materiales_pantalla import MaterialesPantalla
+from views.pantallas.asignaturas_pantalla import AsignaturasPantalla
+from views.pantallas.clases_pantalla import ClasesPantalla
+from views.pantallas.calificaciones_pantalla import CalificacionesPantalla
 
 
 class MainView(ctk.CTkFrame):
@@ -26,6 +30,10 @@ class MainView(ctk.CTkFrame):
             "Alumnos": lambda: AlumnosPantalla(self.content),
             "Aulas": lambda: AulasPantalla(self.content),
             "Profesores": lambda: ProfesoresPantalla(self.content),
+            "Materiales": lambda: MaterialesPantalla(self.content),
+            "Asignaturas": lambda: AsignaturasPantalla(self.content),
+            "Clases": lambda: ClasesPantalla(self.content),
+            "Calificaciones": lambda: CalificacionesPantalla(self.content),
         }
 
         self._build_topbar()

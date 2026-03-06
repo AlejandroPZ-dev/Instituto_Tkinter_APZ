@@ -20,7 +20,6 @@ def main():
         frame.pack(fill="both", expand=True)
 
     def autenticar(usuario: str, clave: str):
-        # Lógica provisional. Más adelante: AuthService + tabla usuario.
         if usuario == "admin" and clave == "admin":
             return {"username": usuario, "role": "ADMIN"}
         return None
